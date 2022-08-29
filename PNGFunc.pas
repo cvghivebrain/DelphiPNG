@@ -6,6 +6,7 @@ uses ExtCtrls, pngimage;
 procedure InitPNG(w, h: integer);
 procedure AssignPNG(img: TImage);
 procedure PixelPNG(r, g, b, a: byte; x, y: integer);
+procedure MovePNG(x, y: integer);
 procedure ShowPNG;
 
 var
@@ -36,6 +37,12 @@ begin
     PNG.Pixels[x,y] := r+(g shl 8)+(b shl 16); // Write RGB values.
     alpha[(y*alphawidth)+x] := a; // Write alpha value.
     end;
+end;
+
+procedure MovePNG(x, y: integer);
+begin
+  pic.Left := x;
+  pic.Top := y;
 end;
 
 procedure ShowPNG;
