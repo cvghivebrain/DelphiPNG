@@ -34,6 +34,7 @@ begin
 
   MovePNG(20,20); // Change position of PNG.
   ShowPNG; // Display PNG on form.
+  SavePNG('test.png');
 end;
 
 end.
