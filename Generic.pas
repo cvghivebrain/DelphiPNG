@@ -33,7 +33,7 @@ begin
   for i := 0 to (PNG.Width*PNG.Height)-1 do PixelPNG(255,0,0,i div PNG.Width,i mod PNG.Width,i div PNG.Width); // Test pattern.
 
   MovePNG(20,20); // Change position of PNG.
-  ShowPNG; // Display PNG on form.
+  ShowPNG(9999,9999); // Display PNG on form.
   SavePNG('test.png');
 end;
 
